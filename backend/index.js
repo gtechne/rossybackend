@@ -11,7 +11,7 @@ const router = require('./routes')
 
 const app = express()
 app.use(cors({
-    origin:  ["https://rossyhairr.vercel.app"], // Allow frontend
+    origin: process.env.FRONTEND_URL , // Allow frontend
     methods: "GET,POST,PUT,DELETE",
     credentials : true
 }))
